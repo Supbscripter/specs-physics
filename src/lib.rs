@@ -292,14 +292,14 @@ pub mod systems;
 pub struct Physics<N: RealField> {
     /// Core structure where physics computation and synchronization occurs.
     /// Also contains ColliderWorld.
-    pub(crate) world: World<N>,
+    pub world: World<N>,
 
     /// Hashmap of Entities to internal Physics bodies.
     /// Necessary for reacting to removed Components.
-    pub(crate) body_handles: HashMap<Index, BodyHandle>,
+    pub body_handles: HashMap<Index, BodyHandle>,
     /// Hashmap of Entities to internal Collider handles.
     /// Necessary for reacting to removed Components.
-    pub(crate) collider_handles: HashMap<Index, ColliderHandle>,
+    pub collider_handles: HashMap<Index, ColliderHandle>,
 }
 
 // Some non-mutating methods for diagnostics and testing
